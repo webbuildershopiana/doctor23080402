@@ -10,7 +10,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-   <title></title>
+   <title>Doctor Event</title>
 
 <meta name="description" content=>
 <meta name="generator" content=META_GENERATOR>
@@ -55,7 +55,6 @@
    }
 </script>
 
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:regular&amp;subset=latin&amp;display=swap"/>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:regular,700&amp;subset=latin&amp;display=swap"/>
  
@@ -114,9 +113,9 @@
            <li id="if3cela"><a page="page://dpjgYUMYebFIgPyU3Mpl" name="Explore Jaipur" slug="explore-jaipur" href="//doctor-event-shopiana-webbuilder-production.vercel.app/explore-jaipur.html" link-type="page" id="if9cibo" class="dropdown-item">Explore Jaipur</a></li>
            <li></li>
           </ul></li>
-         <li id="i59y2hp" class="nav-item"><a url="https://docs.google.com/forms/d/e/1FAIpQLSc2hJNeQ7V9A5jAVMVi9clIfgJ4qr9SGvrejcKNGfGbzpinjQ/viewform?usp=sf_link" href="https://docs.google.com/forms/d/e/1FAIpQLSc2hJNeQ7V9A5jAVMVi9clIfgJ4qr9SGvrejcKNGfGbzpinjQ/viewform?usp=sf_link" link-type="url" id="i46aysh" class="nav-link active">Registration</a></li>
+         <li id="i59y2hp" class="nav-item"><a new-tab target="_blank" url="https://docs.google.com/forms/d/e/1FAIpQLSc2hJNeQ7V9A5jAVMVi9clIfgJ4qr9SGvrejcKNGfGbzpinjQ/viewform?usp=sf_link" href="https://docs.google.com/forms/d/e/1FAIpQLSc2hJNeQ7V9A5jAVMVi9clIfgJ4qr9SGvrejcKNGfGbzpinjQ/viewform?usp=sf_link" link-type="url" id="i46aysh" class="nav-link active">Registration</a></li>
         </ul>
-        <form method="get" class="d-flex"></form>
+        <form method="get" id="igf1161" class="d-flex"></form>
        </div>
       </div>
      </nav>
@@ -296,6 +295,13 @@
     </div>
    </div>
   </div>
+  <script>var props = {"igf1161":{"name":"","target":"_self","method":"POST","url":"https://stgapi.shopiana.in/api/v1/wbWebsite/352/form/formData?store=doctor23080402","emailenable":false}};
+          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
+          var els = document.querySelectorAll(ids);
+          for (var i = 0, len = els.length; i < len; i++) {
+            var el = els[i];
+            (function({name:t,method:e,url:n,emailenable:r}){if(t){const o=this;this.addEventListener("submit",i=>{i.preventDefault();const a=new FormData(o);a.append("emailEnabled",r),a.append("formName",t),fetch(n,{method:e,body:a}).then(t=>{if(t.ok)return t.json();throw new Error("API call failed")}).then(t=>{console.log("API response:",t)}).catch(t=>{console.error("Error during API call:",t)})})}else console.log("somthing went wrong")}.bind(el))(props[el.id]);
+          }</script>
  </body>
 </html>
 </html>
