@@ -191,42 +191,21 @@
   // Get the <select> element inside the "workshop-collection" container
   let workshopSelectElement = document.getElementById('workshop-select').querySelector('select');
   let categorySelectElement = document.getElementById('category-select').querySelector('select');
-  let accoPersonsContainerElement = document.getElementById('acco-persons-main-container');
+  //let accoPersonsContainerElement = document.getElementById('acco-persons-main-container');
   let workshopInput = document.getElementById('work-shop-input').querySelector('input');
   let categoryInput = document.getElementById('category-input').querySelector('input');
   let grandTotalInput = document.getElementById('grand-input').querySelector('input');
-  let totalAccoPersonFeesInput = document.getElementById('total-acco-person-fees').querySelector('input');
-  let accompanyingCheckbox = document.getElementById('accompanying');
-  let accomPersonAddBtn = document.getElementById('accom-person-add').querySelector('a');
-  let accomPersonDeleteBtn = document.getElementById('accom-person-delete').querySelector('a');
+ // let totalAccoPersonFeesInput = document.getElementById('total-acco-person-fees').querySelector('input');
+  //let accompanyingCheckbox = document.getElementById('accompanying');
+ // let accomPersonAddBtn = document.getElementById('accom-person-add').querySelector('a');
+ // let accomPersonDeleteBtn = document.getElementById('accom-person-delete').querySelector('a');
   let total = 0;
-  function onAccoPersonDelete() {
-    console.log('person delete called...');
-  };
-  function onAccoPersonAdd() {
-    //inner-container-1
-    let clonePersonsContainerEl = 
-        document.getElementById('inner-container-1');
-    console.log(clonePersonsContainerEl);
-    // Clone the element
-    let clonedElement = clonePersonsContainerEl.cloneNode(true);
-    accoPersonsContainerElement.append(clonedElement);
-  };
-  accomPersonAddBtn.addEventListener('click' ,() => {
-    onAccoPersonAdd();
-  }
+  //function onAccoPersonDelete() {
+ //   console.log('person delete called...');
+ // };
+  
                                     )
-  if(accompanyingCheckbox) {
-    accompanyingCheckbox?.addEventListener('change', function() {
-      if(accompanyingCheckbox?.checked) {
-        accoPersonsContainerElement.style.display = "block";
-        totalAccoPersonFeesInput.value = 5000;
-      }
-      else {
-        totalAccoPersonFeesInput.value = 0;
-        accoPersonsContainerElement.style.display = "none";
-      }
-    }
+ 
                                           )}
   if(workshopSelectElement) {
     // Add the change event listener to the <select> element
