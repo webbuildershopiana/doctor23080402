@@ -346,7 +346,6 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
   let workshopInput = document.getElementById('work-shop-input').querySelector('input');
   let categoryInput = document.getElementById('category-input').querySelector('input');
   let grandTotalInput = document.getElementById('grand-input').querySelector('input');
-
   let total = 0;
   if(workshopSelectElement) {
     // Add the change event listener to the <select> element
@@ -544,6 +543,7 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
                                                              ).then(responseData => {
                   form.reset();
                   alert("payment Received");
+                  window.location.href = 'https://doctor-event-shopiana-webbuilder-production.vercel.app/index.html';
                 }
                                                                    ).catch(error => {
                   console.log(error);
