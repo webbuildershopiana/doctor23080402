@@ -195,18 +195,11 @@
   let workshopInput = document.getElementById('work-shop-input').querySelector('input');
   let categoryInput = document.getElementById('category-input').querySelector('input');
   let grandTotalInput = document.getElementById('grand-input').querySelector('input');
- // let totalAccoPersonFeesInput = document.getElementById('total-acco-person-fees').querySelector('input');
+  // let totalAccoPersonFeesInput = document.getElementById('total-acco-person-fees').querySelector('input');
   //let accompanyingCheckbox = document.getElementById('accompanying');
- // let accomPersonAddBtn = document.getElementById('accom-person-add').querySelector('a');
- // let accomPersonDeleteBtn = document.getElementById('accom-person-delete').querySelector('a');
+  // let accomPersonAddBtn = document.getElementById('accom-person-add').querySelector('a');
+  // let accomPersonDeleteBtn = document.getElementById('accom-person-delete').querySelector('a');
   let total = 0;
-  //function onAccoPersonDelete() {
- //   console.log('person delete called...');
- // };
-  
-                                    )
- 
-                                          )}
   if(workshopSelectElement) {
     // Add the change event listener to the <select> element
     workshopSelectElement.addEventListener('change', function() {
@@ -233,7 +226,7 @@
   this.addEventListener('submit', e => {
     e.preventDefault();
     // Prevent the default form submission
-    if (!(name && total)) {
+    if (!(name)) {
       alert('Oops! We encountered a problem. Please try again later.');
       return;
     }
