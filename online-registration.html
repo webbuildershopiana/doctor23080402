@@ -363,9 +363,10 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
     }
                                           )}
   if(categorySelectElement) {
-    categoryInput.value  =  Number(categorySelectElement.value);
-    grandTotalInput.value =  Number(categorySelectElement.value);
-    
+    let defaultValue = Number(categorySelectElement.value);
+    categoryInput.value  =  defaultValue;
+    grandTotalInput.value =  defaultValue;
+    total = defaultValue;
     categorySelectElement.addEventListener('change', function() {
       total = 0 ;
       //  console.log(workshopInput);
