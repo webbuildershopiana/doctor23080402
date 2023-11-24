@@ -567,7 +567,10 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
                 }
                                                              ).then(responseData => {
                   form.reset();
-                  window.location.href = 'https://doctor-event-shopiana-webbuilder-production.vercel.app/registration-submit-message.html';
+                  // Get the host URL using the window.location object
+                  let hostUrl = window.location.protocol + '//' + window.location.host;
+                  window.location.href = `${hostUrl}
+/registration-submit-message.html`;
                 }
                                                                    ).catch(error => {
                   console.log(error);
