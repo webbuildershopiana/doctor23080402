@@ -201,7 +201,7 @@
          <label for="workshop" id="ijpzoxe">Workshop<br></label><select type="text" required name="workshop" id="i4qjyn" class="border"><option value="0">Select Workshop</option><option value="4000">Arthritis Workshop</option><option value="4500">Clinical Musculoskeletal Ultrasound Workshop </option><option value="6000">Clinical Musculoskeletal Interventions Hands on Workshop </option><option value="None ">None</option></select>
         </div>
         <div id="category-select" class="col">
-         <label for="Accommodation" id="i7rt9ql">Category<br></label><select type="text" required name="Accommodation" id="i3e8evg" class="border"><option value="1">Residents &amp; Fellows</option><option value="11200">Consultants</option></select>
+         <label for="Accommodation" id="i7rt9ql">Category<br></label><select type="text" required name="Accommodation" id="i3e8evg" class="border"><option value="9400">Residents &amp; Fellows</option><option value="11200">Consultants</option></select>
         </div>
         <div id="accompany-person-select" class="col">
          <label for="accompany-persons" id="ilhnjmi">Accompanying Person</label><select type="text" name="accompany-persons" id="i8lb2hl" class="border"><option value="0">No. of Accompany Person</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
@@ -217,10 +217,10 @@
          <label for="accompany-fees" id="iyxq0mg">Accompany Fees<br></label><input type="number" name="accompany-fees" placeholder="0" disabled id="iir6azj" class="border">
         </div>
         <div id="category-input" class="col-md-2">
-         <label for="Banquet-fees" id="i22p2yl">&nbsp; Category Fees<br></label><input type="number" required name="category-fees" placeholder="0" id="irkkv2e" class="border">
+         <label for="Banquet-fees" id="i22p2yl">&nbsp; Category Fees<br></label><input type="number" required name="category-fees" placeholder="0" id="irkkv2e" disabled class="border">
         </div>
         <div id="grand-input" class="col-md-2">
-         <label for="Grand-total" id="iwvl8iv">Grand Total<br></label><label for="Accommo-fees" id="ijsyin9"><br></label><input type="number" required name="Grand-total" placeholder="0" id="ipd7hsg" class="border">
+         <label for="Grand-total" id="iwvl8iv">Grand Total<br></label><label for="Accommo-fees" id="ijsyin9"><br></label><input type="number" required name="Grand-total" placeholder="0" id="ipd7hsg" disabled class="border">
         </div>
        </div>
       </div>
@@ -530,7 +530,7 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
               key: (_a = order === null || order === void 0 ? void 0 : order.metadata) === null || _a === void 0 ? void 0 : _a.keyId,
               amount: details === null || details === void 0 ? void 0 : details.amount,
               currency: "INR",
-              name: "NJ collections",
+              name: websiteName ?? "",
               description: '',
               image: '',
               order_id: order === null || order === void 0 ? void 0 : order.paymentToken,
@@ -579,7 +579,7 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
               }
               ,
               prefill: {
-                name: websiteName,
+                name: "",
                 email: websiteEmail,
                 contact: websiteNumber
               }
