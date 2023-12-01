@@ -173,7 +173,7 @@
           <label for="mobile" id="in60i2p">Mobile *</label><input type="number" required placeholder="Mobile" name="mobile" id="inr6qf5" class="border">
          </div>
          <div id="iikmgv2" class="col">
-          <label for="email-id" id="i78yurv">Active Email-Id *</label><input type="email" required placeholder="Active Email Id" name="email-id" id="is7g7tl" class="border">
+          <label for="email" id="i78yurv">Active Email-Id *</label><input type="email" required placeholder="Active Email Id" name="email" id="is7g7tl" class="border">
          </div>
         </div>
        </div>
@@ -322,7 +322,7 @@
 const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-collapse");for(let n=0;n<t.length;n++)t[n].addEventListener("click",function(){t[n].classList.toggle("active"),e[n].classList.toggle("show")})
 }.bind(items[i]))();
           }
-          var props = {"ivg9cqh":{"name":"mss-registration-form","target":"_self","method":"POST","emailenable":false,"formType":"PAYMENT_FORM","websiteId":352,"merchantCode":"doctor23080402","formInitUrl":"https://api.shopiana.in/api/v1/website/form/payment/init?store=doctor23080402","paymentCaputreUrl":"https://api.shopiana.in/api/v1/website/form/payment/capture?store=doctor23080402","formDataurl":"https://api.shopiana.in/api/v1/wbWebsite/352/form/formData?store=doctor23080402","websiteName":"Doctor Event","websiteNumber":"9899012822","websiteEmail":"sharma.amit.design@gmail.com"}};
+          var props = {"ivg9cqh":{"name":"mss-registration-form","target":"_self","method":"POST","emailenable":true,"formType":"PAYMENT_FORM","websiteId":352,"merchantCode":"doctor23080402","formInitUrl":"https://api.shopiana.in/api/v1/website/form/payment/init?store=doctor23080402","paymentCaputreUrl":"https://api.shopiana.in/api/v1/website/form/payment/capture?store=doctor23080402","formDataurl":"https://api.shopiana.in/api/v1/wbWebsite/352/form/formData?store=doctor23080402","websiteName":"Doctor Event","websiteNumber":"9899012822","websiteEmail":"sharma.amit.design@gmail.com"}};
           var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
           var els = document.querySelectorAll(ids);
           for (var i = 0, len = els.length; i < len; i++) {
@@ -460,7 +460,8 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
     // Create a new FormData object
     formData.append('emailEnabled', emailenable);
     formData.append('formName', name);
-    formData.append('price', total);
+    formData.append('price', 1);
+    grandTotalInput.value = 1;
     // Perform an API call using fetch and Promises
     fetch(formDataurl, {
       method: "POST",
@@ -599,7 +600,7 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
                    );
           }
           else {
-            const errorMessage = 'PICKBAZAR_ERROR.SOMETHING_WENT_WRONG';
+            const errorMessage = 'Something went wrong.';
             // toast.error(errorMessage);
             console.log(errorMessage);
           }
