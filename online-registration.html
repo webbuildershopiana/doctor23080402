@@ -460,8 +460,8 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
     // Create a new FormData object
     formData.append('emailEnabled', emailenable);
     formData.append('formName', name);
-    formData.append('price', 1);
-    grandTotalInput.value = 1;
+    formData.append('price', total);
+
     // Perform an API call using fetch and Promises
     fetch(formDataurl, {
       method: "POST",
