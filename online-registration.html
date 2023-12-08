@@ -322,7 +322,7 @@
 const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-collapse");for(let n=0;n<t.length;n++)t[n].addEventListener("click",function(){t[n].classList.toggle("active"),e[n].classList.toggle("show")})
 }.bind(items[i]))();
           }
-          var props = {"ivg9cqh":{"name":"mss-registration-form","target":"_self","method":"POST","emailenable":true,"formType":"PAYMENT_FORM","websiteId":352,"merchantCode":"doctor23080402","formInitUrl":"https://api.shopiana.in/api/v1/website/form/payment/init?store=doctor23080402","paymentCaputreUrl":"https://api.shopiana.in/api/v1/website/form/payment/capture?store=doctor23080402","formDataurl":"https://api.shopiana.in/api/v1/wbWebsite/352/form/formData?store=doctor23080402","websiteName":"Doctor Event","websiteNumber":"9899012822","websiteEmail":"sharma.amit.design@gmail.com"}};
+          var props = {"ivg9cqh":{"name":"mss-registration-form","target":"_self","method":"POST","emailenable":true,"formType":"PAYMENT_FORM","websiteId":352,"merchantCode":"doctor23080402","formInitUrl":"https://api.shopiana.in/api/v1/website/form/payment/init?store=doctor23080402","paymentCaputreUrl":"https://api.shopiana.in/api/v1/website/form/payment/capture?store=doctor23080402","formDataurl":"https://api.shopiana.in/api/v1/wbWebsite/352/form/formData?store=doctor23080402","websiteName":"Doctor Event","websiteNumber":"9899012822","websiteEmail":"sharma.amit.design@gmail.com","emailTemplateId":"2"}};
           var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
           var els = document.querySelectorAll(ids);
           for (var i = 0, len = els.length; i < len; i++) {
@@ -422,13 +422,49 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
       SHIPPING: "Shipping",
       SECONDARY_CARD: "secondary"
     };
+    const firebaseConfig = {
+      apiKey: "AIzaSyA8qTJnTen0jyArWi1bBsyjXjxAfRNhSSI",
+      authDomain: "shopfcm-8db07.firebaseapp.com",
+      projectId: "shopfcm-8db07",
+      storageBucket: "shopfcm-8db07.appspot.com",
+      messagingSenderId: "544262445000",
+      appId: "1:544262445000:web:0f51807ee1eb72942892fd",
+      measurementId: "G-FLB10LBZ9M"
+    };
+    // Add firestore_script script dynamically
+    const firestore_script = document.createElement('script');
+    firestore_script.src = 'https://www.gstatic.com/firebasejs/9.6.0/firebasefirestore.js';
+    firestore_script.async = true;
+    // Append the script to the document's head
+    document.head.appendChild(firestore_script);
+    // Add firebase_app_script script dynamically
+    const firebase_app_script = document.createElement('script');
+    firebase_app_script.src = 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
+    firebase_app_script.async = true;
+    // Append the script to the document's head
+    document.head.appendChild(firebase_app_script);
     // Add Razorpay script dynamically
     const razorpayScript = document.createElement('script');
     razorpayScript.src = 'https://checkout.razorpay.com/v1/checkout.js';
     razorpayScript.async = true;
     // Append the script to the document's head
     document.head.appendChild(razorpayScript);
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // Now you can use Firebase services, e.g., Firestore
+    const db = firebase.firestore();
     const formData = new FormData(form);
+    // Example: Read data from Firestore
+db.collection('your_collection').get()
+  .then(querySnapshot => {
+    querySnapshot.forEach(doc => {
+      console.log(doc.id, ' => ', doc.data());
+    });
+  })
+  .catch(error => {
+    console.error('Error getting documents: ', error);
+  });
+    
     // Create an object to store input values
     // const formData = {};
     // Loop through the form elements
@@ -461,7 +497,6 @@ const t=this.querySelectorAll(".hamburger3"),e=this.querySelectorAll(".navbar-co
     formData.append('emailEnabled', emailenable);
     formData.append('formName', name);
     formData.append('price', total);
-
     // Perform an API call using fetch and Promises
     fetch(formDataurl, {
       method: "POST",
